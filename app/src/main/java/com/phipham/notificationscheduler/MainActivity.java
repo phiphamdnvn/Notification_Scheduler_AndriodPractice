@@ -56,4 +56,12 @@ public class MainActivity extends AppCompatActivity {
                 "the constraints are met.", Toast.LENGTH_SHORT).show();
 
     }
+
+    public void cancelJobs() {
+        if (mScheduler != null) {
+            mScheduler.cancelAll();
+            mScheduler = null;
+            Toast.makeText(this, "Jobs cancelled", Toast.LENGTH_SHORT).show();
+        }
+    }
 }
